@@ -5,9 +5,9 @@ public class OrderItem {
 	private Double price;
 
 	private Product product;
-	
-	public OrderItem(Integer quatity, Double price, Product product) {
-		this.quantity = quatity;
+
+	public OrderItem(Integer quantity, Double price, Product product) {
+		this.quantity = quantity;
 		this.price = price;
 		this.product = product;
 	}
@@ -16,12 +16,12 @@ public class OrderItem {
 
 	}
 
-	public Integer getQuatity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
 
-	public void setQuatity(Integer quatity) {
-		this.quantity = quatity;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 	public Double getPrice() {
@@ -31,7 +31,7 @@ public class OrderItem {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
+
 	public Product getProduct() {
 		return product;
 	}
@@ -39,6 +39,7 @@ public class OrderItem {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+
 	public Double subTotal() {
 		return quantity * price;
 	}

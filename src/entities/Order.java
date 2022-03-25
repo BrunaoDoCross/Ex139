@@ -48,10 +48,6 @@ public class Order {
 		return items;
 	}
 
-	public void setItems(List<OrderItem> items) {
-		this.items = items;
-	}
-
 	public void addItem(OrderItem item) {
 		items.add(item);
 	}
@@ -59,8 +55,12 @@ public class Order {
 	public void removeItem(OrderItem item) {
 		items.remove(item);
 	}
-	
-	public Double total() {
-		
+
+	public Double totalPrice() {
+		Double total = 0.0;
+		for (OrderItem i : items) {
+			total += i.subTotal();
+		}
+		return total;
 	}
 }
