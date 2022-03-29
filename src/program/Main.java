@@ -51,8 +51,8 @@ public class Main {
 		System.out.println("Order status: " + items.getStatus());
 		System.out.println(client.getClientInfo());
 		System.out.print("Order items: ");
+		int j = 1;
 		for (OrderItem o : items.getItems()) {
-			int j = 1;
 			System.out.println("\n");
 			System.out.println("Produto " + j + ": " + o.getProduct().getName());
 			System.out.println("Unity price: $" + o.getProduct().getPrice());
